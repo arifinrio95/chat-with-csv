@@ -10,4 +10,5 @@ if uploaded_file is not None:
     query = st.text_area("Ask any question related to the document")
     button = st.button("Submit")
     if button:
-        st.write(get_answer_csv(uploaded_file, query))
+        # st.write(get_answer_csv(uploaded_file, query))
+        exec(get_answer_csv(uploaded_file, query))
