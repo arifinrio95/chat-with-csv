@@ -32,5 +32,14 @@ def get_answer_csv(file: TextIO, query: str) -> str:
 
     # Run the agent on the given query and return the answer
     #query = "whats the square root of the average age?"
+    query_final = f"""1. {query}. 
+        2. Respond with scripts without any text. 
+        3. Respond in plain text code. 
+        4. Don’t start your response with “Sure, here are”. 
+        5. Start your response with “import”.
+        6. Don’t give me any explanation about the script. Response only with python code in a plain text.
+        7. Use Try and Except for each syntax.
+        8. Provide minimalist and aesthetic visualization, with flexibility of user to setting the parameter on streamlit.
+        9. Pay attention to the dataframe schema, don't do any convert."""
     answer = agent.run(query)
     return answer
