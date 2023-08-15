@@ -22,4 +22,4 @@ if uploaded_file is not None:
     button = st.button("Submit")
     if button:
         # st.write(get_answer_csv(uploaded_file, query))
-        exec(get_answer_csv(uploaded_file, query))
+        st.write(get_answer_csv(uploaded_file, query))
