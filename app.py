@@ -2,7 +2,18 @@
 import streamlit as st
 
 from utils import get_answer_csv
+hide_menu = """
+<style>
 
+.stActionButton {
+  visibility: hidden !important;
+}
+</style>
+"""
+st.markdown(
+        hide_menu,
+        unsafe_allow_html=True
+    )
 st.header("Chat with any CSV")
 uploaded_file = st.file_uploader("Upload a csv file", type=["csv"])
 
